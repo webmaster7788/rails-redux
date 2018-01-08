@@ -36,6 +36,7 @@ gem 'bcrypt'
 gem 'carrierwave', '~> 1.0'
 gem 'redis'
 gem 'kaminari'
+gem 'webpacker'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
