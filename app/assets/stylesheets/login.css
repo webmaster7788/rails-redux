@@ -1,0 +1,15 @@
+.login-grid {
+    padding-top: 65px;
+}
+.login-grid div, p, h1 {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.login-grid p {
+    margin-top: 30px !important;
+}
+
+.submit-button {
+    margin-top: 30px !important;
+}
