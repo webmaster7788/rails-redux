@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router'
+import { logIn } from '../../actions/auth'
 import RaisedButton from 'material-ui/RaisedButton'
 import TextField from 'material-ui/TextField'
 import { Grid, Row, Col } from 'react-flexbox-grid'
@@ -16,7 +17,9 @@ export class Login extends Component {
                     <Row>
                         <TextField
                         name="user[email]"
-                        floatingLabelText="Email"/>
+                        floatingLabelText="Email"
+                        errorText={errors.get('login-form')}
+                        />
                     </Row>
                     <Row>
                         <TextField
@@ -50,7 +53,7 @@ const mapDispatchToProps = dispatch =>  ({
     onSubmitLogin: (e) => {
         e.preventDefault()
         const user = new FormData(document.getElementById('login-form'))
-        // dispatch(logIn(user))
+        dispatch(logIn(user))
     }
 })
 
