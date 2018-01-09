@@ -31,6 +31,7 @@ export class Login extends Component {
                         <RaisedButton
                         className="submit-button"
                         type="submit"
+                        disabled={user.get('isFetching')}
                         label="Log in"/>
                     </Row>
                 </form>

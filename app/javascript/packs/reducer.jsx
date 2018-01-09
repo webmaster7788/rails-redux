@@ -2,10 +2,12 @@ import { combineReducers } from 'redux'
 import { Map } from 'immutable'
 import user from './reducers/user'
 import errors from './reducers/errors'
+import currentUser from './reducers/currentUser'
 
 
 const appReducer = combineReducers({
     user,
+    currentUser,
     errors
 })
 
