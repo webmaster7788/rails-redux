@@ -4,12 +4,14 @@ import user from './reducers/user'
 import errors from './reducers/errors'
 import currentUser from './reducers/currentUser'
 import pages from './reducers/pages'
+import usersList from './reducers/usersList'
 
 const appReducer = combineReducers({
     user,
     currentUser,
     errors,
-    pages
+    pages,
+    usersList
 })
 
 const reducer = (state = {}, action) => {

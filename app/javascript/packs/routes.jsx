@@ -5,12 +5,14 @@ import ApplicationLayout from './components/ApplicationLayout'
 import Login from './containers/Login/index'
 import Register from './containers/Register/index'
 import NewsFeed from './containers/NewsFeed'
+import Users from './containers/Users'
 import { getToken } from './helpers/token_helper'
 
 const routes = (
     <div>
         <Route path="/" component={ApplicationLayout} onEnter={checkLogin}>
             <IndexRoute component={NewsFeed}/>
+            <Route path="/users" component={Users} />
         </Route>
         <Route path="/" component={AuthorizationLayout} onEnter={checkLogout}>
             <Route path="login" component={Login} />
