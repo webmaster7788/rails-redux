@@ -10,5 +10,6 @@ Rails.application.routes.draw do
   patch "/users/", to: "users#update"
 
   resources :users, only: [:create, :index]
+  resources :posts, only: [:create, :index]
 
 end

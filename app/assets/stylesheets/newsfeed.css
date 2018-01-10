@@ -1,0 +1,26 @@
+.author-avatar {
+    cursor: pointer;
+}
+
+.photos-input input {
+    display: none;
+}
+
+.photos-input svg:hover {
+    cursor: pointer;
+}
+
+.dropzone {
+    width: 100% !important;
+    height: 100% !important;
+    border: 0 !important;
+    cursor: pointer;
+}
+
+#post-form {
+    margin-bottom: 10px;
+}
+
+.preview-photo svg {
+    position: absolute;
+}
