@@ -1,0 +1,17 @@
+.avatar {
+    max-width: 100%;
+}
+
+.user-profile {
+    text-align: center;
+}
+
+#avatar-dropzone {
+    width: 100% !important;
+    height: 100% !important;
+    border: 0 !important;
+}
+
+#avatar-dropzone div {
+    display: none;
+}

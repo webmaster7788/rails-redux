@@ -6,12 +6,14 @@ import Login from './containers/Login/index'
 import Register from './containers/Register/index'
 import NewsFeed from './containers/NewsFeed'
 import Users from './containers/Users'
+import User from './containers/User'
 import { getToken } from './helpers/token_helper'
 
 const routes = (
     <div>
         <Route path="/" component={ApplicationLayout} onEnter={checkLogin}>
             <IndexRoute component={NewsFeed}/>
+            <Route path="users/:id" component={User} />
             <Route path="/users" component={Users} />
         </Route>
         <Route path="/" component={AuthorizationLayout} onEnter={checkLogout}>
