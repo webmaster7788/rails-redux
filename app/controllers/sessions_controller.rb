@@ -1,4 +1,4 @@
-class SessionController < ApplicationController
+class SessionsController < ApplicationController
   before_action :authorizate_request!, only: [:destroy]
 
   def create
