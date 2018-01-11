@@ -6,6 +6,9 @@ import currentUser from './reducers/currentUser'
 import pages from './reducers/pages'
 import usersList from './reducers/usersList'
 import postsList from './reducers/postsList'
+import chatRoomsList from './reducers/chatRoomsList'
+import chatRoom from './reducers/chatRoom'
+import messagesList from './reducers/messagesList'
 
 const appReducer = combineReducers({
     user,
@@ -13,7 +16,9 @@ const appReducer = combineReducers({
     errors,
     pages,
     usersList,
-    postsList
+    postsList,
+    chatRoomsList,
+    chatRoom
 })
 
 const reducer = (state = {}, action) => {

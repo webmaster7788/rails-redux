@@ -7,9 +7,12 @@ Rails.application.routes.draw do
 
   get "/current_user", to: "users#current_user"
   get "/users/:id", to: "users#user"
+  get "/messages", to: "messages#index"
   patch "/users/", to: "users#update"
-
   resources :users, only: [:create, :index]
   resources :posts, only: [:create, :index]
+  resources :chat_rooms, only: [:create, :index, :show]
+
+  mount ActionCable.server => '/cable'
 
 end

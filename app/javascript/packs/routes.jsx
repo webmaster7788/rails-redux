@@ -1,12 +1,14 @@
 import React from 'react'
 import { Route, IndexRoute } from 'react-router'
-import AuthorizationLayout from './components/AuthorizationLayout'
 import ApplicationLayout from './components/ApplicationLayout'
-import Login from './containers/Login/index'
-import Register from './containers/Register/index'
-import NewsFeed from './containers/NewsFeed'
-import Users from './containers/Users'
+import AuthorizationLayout from './components/AuthorizationLayout'
+import Login from './containers/Login'
 import User from './containers/User'
+import Users from './containers/Users'
+import NewsFeed from './containers/NewsFeed'
+import Register from './containers/Register'
+import ChatRooms from './containers/ChatRooms'
+import ChatRoom from './containers/ChatRoom'
 import { getToken } from './helpers/token_helper'
 
 const routes = (
@@ -15,10 +17,12 @@ const routes = (
             <IndexRoute component={NewsFeed}/>
             <Route path="users/:id" component={User} />
             <Route path="/users" component={Users} />
+            <Route path="chatrooms" component={ChatRooms} />
+            <Route path="chatrooms/:id" component={ChatRoom} />
         </Route>
         <Route path="/" component={AuthorizationLayout} onEnter={checkLogout}>
             <Route path="login" component={Login} />
-            <Register path="register" component={Register} />
+            <Route path="register" component={Register}/>
         </Route>
     </div>
 )
